@@ -3,10 +3,11 @@ import Nav from './Nav';
 
 const styles = {
     headerStyle: {
-      background: 'red',
+      backgroundColor: '#091540',
     },
     headingStyle: {
-      fontSize: '100px',
+      fontSize: '80px',
+      color: 'white',
     },
     nav: {
       display: 'flex'
@@ -19,7 +20,7 @@ function Header(props) {
   
   return (<div style={styles.headerStyle}>
       <nav>
-      <h1 style={styles.headingStyle}>Mitchell</h1>
+      <h1 style={styles.headingStyle}>Mitchell Freeman</h1>
       <div className='routes'>
       {navButtons.map((btn, index) => {
         

@@ -1,5 +1,24 @@
 import React from 'react';
 
+const styles = {
+  containerStyle: {
+    backgroundColor: '#7692FF',
+    width: '100%',
+    height: '100%',
+  },
+  imgStyle: {
+    width: '30%'
+  },
+  cardStyle: {
+    display: 'flex-wrap',
+    backgroundColor: '#3D518C',
+    width: '40%',
+    height: '30%',
+    padding: '10px'
+
+  }
+};
+
 const apps = [
   {
     name: "SauceMakerPro", 
@@ -28,14 +47,14 @@ const apps = [
 ]
 function Project(props) {
   return (
-    <div className="project">
+    <div className="project" style={styles.containerStyle}>
       {apps.map(app => {
         return(
-        <div className="card">
-          <img src={apps.img} alt =""></img>
-          <h2>{apps.name}</h2>
-          <a href={apps.url}>{apps.name}</a>
-          <a href={apps.gitHub}>{apps.gitHub}</a>
+        <div className="card" key={app.name} style = {styles.cardStyle}>
+          <img src={app.img} alt ="" style={styles.imgStyle}></img>
+          <h2>{app.name}</h2>
+          <a href={app.url}>{app.url}</a>
+          <a href={app.gitHub}>{app.gitHub}</a>
         </div>)
         })}
     </div>

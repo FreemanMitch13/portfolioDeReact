@@ -1,5 +1,13 @@
 import React from 'react';
 
+const styles = {
+  containerStyle: {
+    backgroundColor: '#7692FF',
+    width: '100%',
+    height: '100%'
+  }
+};
+
 const apps = [
     {
       name: "SauceMakerPro", 
@@ -28,7 +36,7 @@ const apps = [
   ]
   function MyPortfolio(props) {
     return (
-      <div className="project">
+      <div className="project" style={styles.containerStyle}>
         {apps.map(app=>{
           return (
           <div className="card">
